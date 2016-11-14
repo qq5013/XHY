@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="10/14/2015 18:04:58" ReportInfo.Modified="08/11/2016 08:40:26" ReportInfo.CreatorVersion="1.6.2.0">
+  <Dictionary>
+    <TableDataSource Name="ProductSlackQuery" ReferenceName="ProductSlackQuery" DataType="System.Int32" Enabled="true">
+      <Column Name="WarehouseName" DataType="System.String"/>
+      <Column Name="AreaName" DataType="System.String"/>
+      <Column Name="ShelfName" DataType="System.String"/>
+      <Column Name="CellName" DataType="System.String"/>
+      <Column Name="CategoryName" DataType="System.String"/>
+      <Column Name="ProductName" DataType="System.String"/>
+      <Column Name="Spec" DataType="System.String"/>
+      <Column Name="Unit" DataType="System.String"/>
+      <Column Name="WarehouseCode" DataType="System.String"/>
+      <Column Name="AreaCode" DataType="System.String"/>
+      <Column Name="PalletCode" DataType="System.String"/>
+      <Column Name="RowID" DataType="System.Int32"/>
+      <Column Name="SourceBillID" DataType="System.String"/>
+      <Column Name="ProductCode" DataType="System.String"/>
+      <Column Name="Barcode" DataType="System.String"/>
+      <Column Name="BatchNo" DataType="System.String"/>
+      <Column Name="Quantity" DataType="System.Decimal"/>
+      <Column Name="LockQty" DataType="System.Decimal"/>
+      <Column Name="Indate" DataType="System.DateTime"/>
+      <Column Name="Memo" DataType="System.String"/>
+      <Column Name="IsLock" DataType="System.String"/>
+      <Column Name="CellCode" DataType="System.String"/>
+      <Column Name="Creator" DataType="System.String"/>
+      <Column Name="CreateDate" DataType="System.DateTime"/>
+      <Column Name="Updater" DataType="System.String"/>
+      <Column Name="UpdateDate" DataType="System.DateTime"/>
+      <Column Name="Other1" DataType="System.String"/>
+      <Column Name="Other2" DataType="System.String"/>
+      <Column Name="Other3" DataType="System.String"/>
+      <Column Name="Other4" DataType="System.String"/>
+      <Column Name="Other5" DataType="System.String"/>
+      <Column Name="SlackDays" DataType="System.Int32"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="297" PaperHeight="210">
+    <PageHeaderBand Name="PageHeader1" Width="1047.06" Height="69.56">
+      <TextObject Name="Text1" Width="1030.05" Height="37.8" Text="产品呆滞表" HorzAlign="Center" VertAlign="Center" Font="宋体, 12pt, style=Bold"/>
+      <TableObject Name="Table1" Left="98.38" Top="50.66" Width="851.2" Height="18.9" Border.Lines="All">
+        <TableColumn Name="Column1" Width="92.95"/>
+        <TableColumn Name="Column3" Width="82.72"/>
+        <TableColumn Name="Column4"/>
+        <TableColumn Name="Column6" Width="102.86"/>
+        <TableColumn Name="Column19" Width="122.85"/>
+        <TableColumn Name="Column38"/>
+        <TableColumn Name="Column22"/>
+        <TableColumn Name="Column40"/>
+        <TableColumn Name="Column8" Width="113.4"/>
+        <TableColumn Name="Column42" Width="71.82"/>
+        <TableRow Name="Row1">
+          <TableCell Name="Cell1" Border.Lines="Right" Text="仓库" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell3" Border.Lines="Right" Text="货位" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell4" Border.Lines="Right" Text="托盘" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell6" Border.Lines="Right" Text="产品编码" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell19" Border.Lines="Right" Text="产品名称" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell38" Text="生产批次" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell22" Border.Lines="All" Text="库存数量" HorzAlign="Right" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell40" Border.Lines="Right" Text="单位" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell8" Border.Lines="Right" Text="入库时间" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell42" Border.Lines="Right" Text="呆滞天数" HorzAlign="Right" VertAlign="Center" Font="宋体, 9pt"/>
+        </TableRow>
+      </TableObject>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="73.56" Width="1047.06" Height="28.35" DataSource="ProductSlackQuery">
+      <TableObject Name="Table2" Left="98.38" Width="851.22" Height="28.35" Border.Lines="All">
+        <TableColumn Name="Column24" Width="92.95"/>
+        <TableColumn Name="Column26" Width="82.74"/>
+        <TableColumn Name="Column27"/>
+        <TableColumn Name="Column29" Width="102.86"/>
+        <TableColumn Name="Column30" Width="122.85"/>
+        <TableColumn Name="Column39"/>
+        <TableColumn Name="Column33"/>
+        <TableColumn Name="Column41"/>
+        <TableColumn Name="Column35" Width="113.4"/>
+        <TableColumn Name="Column43" Width="71.82"/>
+        <TableRow Name="Row2" Height="28.35">
+          <TableCell Name="Cell24" Border.Lines="Right" Text="[ProductSlackQuery.WarehouseName]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell26" Border.Lines="Right" Text="[ProductSlackQuery.CellCode]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell27" Border.Lines="Right" Text="[ProductSlackQuery.PalletCode]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell29" Border.Lines="Right" Text="[ProductSlackQuery.ProductCode]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell30" Border.Lines="Right" Text="[ProductSlackQuery.ProductName]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell39" Text="[ProductSlackQuery.BatchNo]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell33" Border.Lines="All" Text="[ProductSlackQuery.Quantity]" HorzAlign="Right" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell41" Border.Lines="Right" Text="[ProductSlackQuery.Unit]"/>
+          <TableCell Name="Cell35" Border.Lines="Right" Text="[IIf(Year([ProductSlackQuery.Indate])==1,&quot;&quot;,FormatDateTime([ProductSlackQuery.Indate],&quot;yyyy/MM/dd&quot;))]&#13;&#10;" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell43" Border.Lines="Right" Text="[ProductSlackQuery.SlackDays]" HorzAlign="Right" VertAlign="Center" Font="宋体, 9pt"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="105.91" Width="1047.06"/>
+  </ReportPage>
+</Report>

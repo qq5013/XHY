@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="10/14/2015 18:04:58" ReportInfo.Modified="08/10/2016 16:06:06" ReportInfo.CreatorVersion="1.6.2.0">
+  <Dictionary>
+    <TableDataSource Name="OutStockQuery" ReferenceName="OutStockQuery" DataType="System.Int32" Enabled="true">
+      <Column Name="PalletCode" DataType="System.String"/>
+      <Column Name="CellCode" DataType="System.String"/>
+      <Column Name="Finisher" DataType="System.String"/>
+      <Column Name="FinishDate" DataType="System.DateTime"/>
+      <Column Name="ProductCode" DataType="System.String"/>
+      <Column Name="Barcode" DataType="System.String"/>
+      <Column Name="Quantity" DataType="System.Decimal"/>
+      <Column Name="CategoryName" DataType="System.String"/>
+      <Column Name="ProductName" DataType="System.String"/>
+      <Column Name="Spec" DataType="System.String"/>
+      <Column Name="Unit" DataType="System.String"/>
+      <Column Name="WarehouseName" DataType="System.String"/>
+      <Column Name="SourceBillNo" DataType="System.String"/>
+      <Column Name="CustomerName" DataType="System.String"/>
+      <Column Name="BillID" DataType="System.String"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="297" PaperHeight="210">
+    <PageHeaderBand Name="PageHeader1" Width="1047.06" Height="69.56">
+      <TextObject Name="Text1" Width="1030.05" Height="37.8" Text="出库明细表" HorzAlign="Center" VertAlign="Center" Font="宋体, 12pt, style=Bold"/>
+      <TableObject Name="Table1" Left="2.62" Top="50.66" Width="1028.4" Height="18.9" Border.Lines="All">
+        <TableColumn Name="Column1" Width="92.95"/>
+        <TableColumn Name="Column46" Width="122.93"/>
+        <TableColumn Name="Column44" Width="142.66"/>
+        <TableColumn Name="Column4"/>
+        <TableColumn Name="Column6" Width="102.86"/>
+        <TableColumn Name="Column19" Width="122.85"/>
+        <TableColumn Name="Column38"/>
+        <TableColumn Name="Column22"/>
+        <TableColumn Name="Column40"/>
+        <TableColumn Name="Column42"/>
+        <TableColumn Name="Column8" Width="113.4"/>
+        <TableRow Name="Row1">
+          <TableCell Name="Cell1" Border.Lines="Right" Text="仓库" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell46" Border.Lines="Right" Text="出库单号" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell44" Border.Lines="Right" Text="使用单位" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell4" Border.Lines="Right" Text="托盘" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell6" Border.Lines="Right" Text="产品编码" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell19" Border.Lines="Right" Text="产品名称" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell38" Border.Lines="Right" Text="生产批次" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell22" Border.Lines="Right" Text="出库数量" HorzAlign="Right" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell40" Border.Lines="Right" Text="单位" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell42" Border.Lines="Right" Text="出库人员" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell8" Border.Lines="Right" Text="出库时间" VertAlign="Center" Font="宋体, 9pt"/>
+        </TableRow>
+      </TableObject>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="73.56" Width="1047.06" Height="28.35" DataSource="OutStockQuery">
+      <TableObject Name="Table2" Left="2.62" Width="1028.17" Height="28.35" Border.Lines="All">
+        <TableColumn Name="Column24" Width="92.95"/>
+        <TableColumn Name="Column47" Width="122.85"/>
+        <TableColumn Name="Column45" Width="142.51"/>
+        <TableColumn Name="Column27"/>
+        <TableColumn Name="Column29" Width="102.86"/>
+        <TableColumn Name="Column30" Width="122.85"/>
+        <TableColumn Name="Column39"/>
+        <TableColumn Name="Column33"/>
+        <TableColumn Name="Column41"/>
+        <TableColumn Name="Column43"/>
+        <TableColumn Name="Column35" Width="113.4"/>
+        <TableRow Name="Row2" Height="28.35">
+          <TableCell Name="Cell24" Border.Lines="Right" Text="[OutStockQuery.WarehouseName]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell47" Border.Lines="Right" Text="[OutStockQuery.BillID]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell45" Border.Lines="Right" Text="[OutStockQuery.CustomerName]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell27" Border.Lines="Right" Text="[OutStockQuery.PalletCode]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell29" Border.Lines="Right" Text="[OutStockQuery.ProductCode]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell30" Border.Lines="Right" Text="[OutStockQuery.ProductName]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell39" Text="[OutStockQuery.Barcode]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell33" Border.Lines="All" Text="[OutStockQuery.Quantity]" HorzAlign="Right" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell41" Border.Lines="Right" Text="[OutStockQuery.Unit]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell43" Border.Lines="Right" Text="[OutStockQuery.Finisher]" VertAlign="Center" Font="宋体, 9pt"/>
+          <TableCell Name="Cell35" Border.Lines="Right" Text="[IIf(Year([OutStockQuery.FinishDate])==1,&quot;&quot;,FormatDateTime([OutStockQuery.FinishDate],&quot;yyyy/MM/dd&quot;))]&#13;&#10;" VertAlign="Center" Font="宋体, 9pt"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="105.91" Width="1047.06"/>
+  </ReportPage>
+</Report>
